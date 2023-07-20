@@ -4,10 +4,10 @@ create table directors(director_id varchar(50) primary key,director_name varchar
 insert into directors values("SSR10","S S Rajamouli"),("Suj11","Sujeeth"),("RKK12","Radha Krishna Kumar"),("OR13","Om Raut");
 select * from directors;
 create table movies(movie_id int(10) primary key,title varchar(50),release_year int(4),director_id varchar(10),foreign key(director_id) references directors(director_id));
-insert into movies values(10,"Baahubali2",2017,"SSR10"),(11,"Saaho",2019,"Suj11"),(12,"Radhe Shyam",2022,"RKK12"),(13,"Adipurush",2023,"OR13");
+insert into movies values(10,"RRR",2022,"SSR10"),(11,"KGF",2019,"Suj11"),(12,"Radhe Shyam",2022,"RKK12"),(13,"Adipurush",2023,"OR13");
 select * from movies;
 create table genres(genre_id varchar(10) primary key,genre_name varchar(30));
-insert into genres values("G1","Action,Romance"),("G2","Action,Triller"),("G3","Romance");
+insert into genres values("G1","Action,patriotism"),("G2","Action,Triller"),("G3","Romance");
 select * from genres;
 create table movie_genres(movie_id int(10),genre_id varchar(10),foreign key(movie_id) references movies(movie_id),foreign key(genre_id) references genres(genre_id));
 insert into movie_genres values(10,"G1"),(11,"G2"),(12,"G3"),(13,"G1");
